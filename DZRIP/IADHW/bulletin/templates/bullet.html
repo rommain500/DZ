@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Объявление №{{ bullet.id }}{% endblock %}
+
+{% block body %}
+<h1>Объявление №{{ bullet.id }} &ndash; {{ bullet.name }}</h1>
+<p>{{ bullet.description }}</p>
+<p><small>Отправлено <small>{{ bullet.datetime }}</small></a> by <a href="{% url 'user_url' bullet.user_posted_id %}">{{ bullet.user_posted }}</a></small></p>
+{% endblock %}
